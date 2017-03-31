@@ -1,0 +1,25 @@
+<h1>About this team</h1>
+
+<p>This is a damn good team.</p>
+
+<h3>Add a member to this team</h3>
+
+<form action="/member" method="post">
+  <input id='team_id' name='team_id' type='hidden' value='<%= @team.id() %>'>
+  <label for="member_name">Enter member name here</label><br>
+
+  <input id="member_name" name="member_name" type="text"><br>
+  <button type="submit">Add</button>
+</form>
+
+
+
+
+<div id="member_list">
+  <ul>
+    <% @team.members().each do |member| %>
+    <li><%= member.member_name() %></li>
+    <% end %>
+
+  </ul>
+</div>

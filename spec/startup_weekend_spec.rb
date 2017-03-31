@@ -1,4 +1,5 @@
 require('rspec')
+require('member')
 require('startup_weekend')
 
 
@@ -36,6 +37,13 @@ describe(Team) do
         test_team = Team.new("FundUS")
         test_team.save()
         expect(Team.all()).to(eq([test_team]))
+      end
+    end
+
+    describe('#members') do
+      it("initially returns an empty array of members for the team") do
+        test_team = Team.new("Joe")
+        expect(test_team.members()).to(eq([]))
       end
     end
 

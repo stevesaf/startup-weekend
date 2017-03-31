@@ -6,6 +6,7 @@ class Team
   define_method(:initialize) do |name|
     @name = name
     @id = @@teams.length().+(1)
+    @members = []
 
   end
 
@@ -34,6 +35,14 @@ class Team
 
   define_method(:name) do
     @name
+  end
+
+  define_method(:members) do
+    @members
+  end
+
+  define_method(:add_member) do |member|
+    @members.push(member)
   end
 
   define_method(:id) do
