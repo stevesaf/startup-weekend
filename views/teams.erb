@@ -12,14 +12,11 @@
   <button type="submit">Add</button>
 </form>
 
-
-
-
 <div id="member_list">
   <ul>
     <% @team.members().each do |member| %>
     <li><%= member.member_name() %></li>
     <% end %>
-
   </ul>
 </div>
+<a href="/">GO HOME</a>
